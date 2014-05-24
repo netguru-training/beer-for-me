@@ -133,6 +133,15 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (5.3.4)
+    monetize (0.3.0)
+      money (~> 6.1.0.beta1)
+    money (6.1.1)
+      i18n (~> 0.6.4)
+    money-rails (0.11.0)
+      activesupport (>= 3.0)
+      monetize (~> 0.3.0)
+      money (~> 6.1.1)
+      railties (>= 3.0)
     mongoid (4.0.0.beta1)
       activemodel (>= 4.0.0)
       moped (~> 2.0.beta6)
@@ -268,6 +277,7 @@ DEPENDENCIES
   html2haml
   hub
   jquery-rails
+  money-rails
   mongoid
   mongoid-rspec
   mongoid_taggable
