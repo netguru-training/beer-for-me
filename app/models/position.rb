@@ -5,4 +5,6 @@ class Position
   field :name, type: String
   field :price, type: BigDecimal
 
+  embedded_in :order_item
+
 end
