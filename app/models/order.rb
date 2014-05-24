@@ -9,9 +9,12 @@ class Order
 
   before_create :set_number
 
+  scope :pending, -> { Order.where(status: 'pending') }
+
   def set_number
     self.number = new_order_number
   end
+
 
   private
 

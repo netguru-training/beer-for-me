@@ -1,0 +1,2 @@
+module Chef::OrderHelper
+end
