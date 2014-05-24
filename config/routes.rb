@@ -9,5 +9,5 @@ BeerForMe::Application.routes.draw do
   namespace :chef do
     resources :orders, only: [:index, :update]
   end
-
+  get 'dashboard/' => 'dashboard#index', as: 'dashboard'
 end
