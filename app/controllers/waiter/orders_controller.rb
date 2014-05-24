@@ -5,9 +5,6 @@ module Waiter
     expose(:positions) { Position.all }
     expose(:orders) { Order.all }
 
-    def index
-    end
-
     def new
     end
 
