@@ -1,0 +1,2 @@
+class ChiefController < ApplicationController
+end
