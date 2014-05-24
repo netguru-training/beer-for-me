@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe OrderItem do
-  # pending "add some examples to (or delete) #{__FILE__}"
+  it { should have_many :positions }
+  it { should have_field :quantity }
+  it { should belong_to :order}
 end
