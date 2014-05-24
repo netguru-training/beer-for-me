@@ -3,15 +3,22 @@ class Order
   include Mongoid::Timestamps
 
   field :number, type: Integer
-  field :status, type: String
+
+  # available status:
+  # PENDING, READY, COMPLETED
+  field :status, type: String, default: 'PENDING'
 
   has_many :order_items
 
   before_create :set_number
 
+  scope :pending, -> { Order.where(status: 'PENDING') }
+  scope :noncompleted , -> { where(:status.ne => 'COMPLETED') }
+
   def set_number
     self.number = new_order_number
   end
+
 
   private
 

@@ -1,0 +1,6 @@
+%ul{ id: "order-list" }
+  - orders.each do |order|
+    %li{ class: "order" }
+      %span{ class: "order-number" }= order.number
+      = button_to "Mark as ready!", chef_order_path(order), method: 'patch'
+      = render 'order_items/index', order: order

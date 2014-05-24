@@ -2,6 +2,8 @@
 
 FactoryGirl.define do
   factory :order do
-    order_items { [FactoryGirl.build(:order_item), FactoryGirl.build(:order_item)] }
+    after(:create) do |order|
+      FactoryGirl.create_list(:order_item, 3, order: order)
+    end
   end
 end

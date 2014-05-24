@@ -1,0 +1,6 @@
+%h1 Dashboard
+%ol
+  - orders.each do |order|
+    %li.post--short-size
+      .post__title= order.number
+      .post__body= order.status
