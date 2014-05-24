@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :order_item do
-    quantity 3
+    quantity { Random.rand(10) }
     position { FactoryGirl.create(:position) }
     order
   end
