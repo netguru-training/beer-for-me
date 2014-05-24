@@ -10,8 +10,6 @@ BeerForMe::Application.routes.draw do
   #   resources :orders
   # end
 
-
->>>>>>> de4029b4069c593626286c9f7172bdba49b1b141
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
