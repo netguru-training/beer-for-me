@@ -3,7 +3,7 @@ BeerForMe::Application.routes.draw do
   root :to => "home#index"
 
   namespace :waiter do
-    resources :orders
+    resources :orders, only: [:new, :create]
   end
 
   namespace :chef do
