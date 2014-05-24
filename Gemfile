@@ -19,6 +19,8 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem 'slim'
 
+gem 'money-rails'
+
 group :development do
   gem 'html2haml'
   gem 'quiet_assets'
