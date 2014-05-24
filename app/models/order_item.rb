@@ -5,6 +5,6 @@ class OrderItem
   field :quantity, type: Integer
 
   belongs_to :order
-  has_many :positions
+  embeds_one :position
   
 end

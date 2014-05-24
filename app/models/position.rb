@@ -6,4 +6,5 @@ class Position
   field :price, type: Money
 
   validates_numericality_of :price, greater_than: 0
+
 end
