@@ -27,7 +27,7 @@ class Order
   end
 
   def last_order_number
-    Order.first ? Order.first.number : 9
+    Order.last ? Order.last.number : 9
   end
 
 end

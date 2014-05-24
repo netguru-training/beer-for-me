@@ -3,6 +3,10 @@ module Waiter
     expose(:waiter_orders) { Order.new }
     expose(:order_item) { OrderItem.new }
     expose(:positions) { Position.all }
+    expose(:orders) { Order.all }
+
+    def index
+    end
 
     def new
     end
