@@ -1,5 +1,7 @@
-= simple_form_for order_item do |f|
-  = positions.each do |p|
-    %p= p.name
-    = f.label :quantity
-    = f.button :submit 
+= form_for [:waiter, waiter_orders] do |f|
+  - positions.each do |position|
+    = fields_for "order_items[]", order_item do |ff|
+      %p= position.name
+      = ff.number_field :quantity
+      = ff.hidden_field :id, :value => position.id
+  = f.submit 'Add Order' 
