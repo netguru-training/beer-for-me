@@ -2,5 +2,6 @@
 
 FactoryGirl.define do
   factory :order do
+    order_items { [FactoryGirl.build(:order_item), FactoryGirl.build(:order_item)] }
   end
 end
