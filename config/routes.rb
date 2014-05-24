@@ -11,7 +11,6 @@ BeerForMe::Application.routes.draw do
   # namespace :chef do
   #   resources :orders
   # end
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
