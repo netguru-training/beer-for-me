@@ -2,7 +2,7 @@
   - orders.each do |order|
     %li{ class: "order" }
       %span{ class: "order-number" }= order.number
-      - if show_button_for? order
+      - if order.show_status_change_button?
         = button_to "Mark as #{order.next_status}!", status_update_path(order), method: 'patch', class: "btn btn-primary"
       - unless order.hide_items?
         = render 'order_items/index', order: order
