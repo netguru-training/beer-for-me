@@ -1,5 +1,6 @@
 class Dashboard::OrdersController < Dashboard::BaseController
-  expose_decorated(:orders, decorator: Dashboard::OrderDecorator) { Order.noncompleted }
+  expose_decorated(:pending_orders, decorator: Dashboard::OrderDecorator) { Order.pending }
+  expose_decorated(:ready_orders, decorator: Dashboard::OrderDecorator) { Order.ready }
   expose_decorated(:order, decorator: Dashboard::OrderDecorator)
 
   def index
