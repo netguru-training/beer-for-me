@@ -19,6 +19,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 gem 'slim'
+gem "autoprefixer-rails"
 
 gem 'money-rails'
 gem 'font-awesome-rails'

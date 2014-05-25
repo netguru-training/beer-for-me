@@ -6,5 +6,6 @@ $(document).ready ()->
   $('.fa-minus').click ()->
     quantityField = $(this).parent().parent().find('#order_items__quantity')
     quantityFieldValue = parseInt quantityField.attr("value")
+    return true if quantityFieldValue < 1
     quantityField.attr("value", quantityFieldValue - 1)
 
