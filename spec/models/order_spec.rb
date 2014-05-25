@@ -14,10 +14,12 @@ describe Order do
 
   it "should increase newer order number by one" do
     expect(order2.number).to eq(order.number+1)
+    order3 = FactoryGirl.create(:order)
+    expect(order3.number).to eq(order2.number+1)
   end
 
   it "should set reset number cycle" do
-    order.update_attribute(:number, 60)
+    Order.recent.first.update_attribute(:number,60)
     order3 = FactoryGirl.create(:order)
     expect(order3.number).to eq(10)
   end

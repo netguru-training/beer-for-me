@@ -1,6 +1,7 @@
 %ul{ id: "order-list" }
   - orders.each do |order|
     %li{ class: "order" }
-      %h3{ class: "order-number" }= "Order no. #{order.number}"
+      %span{ class: "order-number" }= order.number
       = button_to "Mark as ready!", chef_order_path(order), method: 'patch', :class => "btn btn-primary"
-      = render 'order_items/index', order: order
+      - unless hide_order_items
+        = render 'order_items/index', order: order

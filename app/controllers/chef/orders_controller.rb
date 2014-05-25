@@ -1,4 +1,4 @@
-class Chef::OrdersController < ApplicationController
+class Chef::OrdersController < Chef::BaseController
 
   expose(:orders) { Order.pending }
   expose(:order)
