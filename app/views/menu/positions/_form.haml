@@ -4,6 +4,9 @@
     = f.text_field :name
   .field
     = f.label :price
-    = f.number_field :price
+    = f.number_field :price, :step => 0.01
+  .field
+    = f.label :image
+    = f.text_field :image  
   .actions
     = f.submit 'Save', :class => "btn btn-primary"

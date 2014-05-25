@@ -15,5 +15,6 @@
           %td.controls
             = fa_icon "plus"
             = fa_icon "minus"
+          %td= image_tag position.image, size: "100x100"
           = ff.hidden_field :id, :value => position.id, :class => "form-control"
   = f.submit 'Add Order', :class => "btn btn-primary"
