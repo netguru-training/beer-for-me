@@ -8,6 +8,7 @@ class Chef::OrdersController < Chef::BaseController
 
   def update
     order.update_attribute(:status, "READY")
+    flash[:notice] = "Chief set order number #{order.number} to ready."
     render :index
   end
 

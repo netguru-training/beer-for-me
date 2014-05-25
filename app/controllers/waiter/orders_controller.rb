@@ -17,6 +17,8 @@ module Waiter
         order.order_items.create(quantity: oi['quantity'], position: position)
       end
 
+      flash[:notice] = "Waiter created order number #{order.number}"
+
       redirect_to new_waiter_order_path
     end
 
