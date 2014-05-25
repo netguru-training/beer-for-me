@@ -4,3 +4,6 @@ notifications:
   hipchat:
     rooms:
       secure: uz1MFTxcZrs0eDiMhPhCbERK9nmmVCoEtuxiAM3E2gPWxPmDBNgSd7yE8KGYfPhHmKq+wan3ygwu+1GsY0+rrn/I5Ubpwhn14U5XkU+tWb2PUrdiCICRRfrmw3D0SCPKJSKWHmKHpKIodyUKm/C1rYK6UrDT5RUBAr6yDaUAql4=
+deploy:
+  provider: heroku
+  api_key: ab638a27-2b7c-4c2d-9915-7903c0743975
