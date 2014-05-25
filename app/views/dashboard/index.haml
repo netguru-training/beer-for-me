@@ -1,6 +1,7 @@
 %h1 Dashboard
 %ol
   - orders.each do |order|
-    %li.post--short-size
-      .post__title= order.number
-      .post__body= order.status
+    %p
+      = order.number.to_s + ' - ' + order.status.to_s
+      = link_to 'mark as completed', mark_order_as_completed_path(order.id), class: 'post__button--edit',
+      data: { confirm: 'Are you sure to mark selected order as completed?' }

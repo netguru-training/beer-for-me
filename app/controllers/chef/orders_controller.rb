@@ -7,7 +7,7 @@ class Chef::OrdersController < ApplicationController
   end
 
   def update
-    order.update_attribute(:status, "ready")
+    order.update_attribute(:status, "READY")
     render :index
   end
 
