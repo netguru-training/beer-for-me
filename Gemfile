@@ -21,6 +21,7 @@ gem 'uglifier'
 gem 'slim'
 
 gem 'money-rails'
+gem 'font-awesome-rails'
 
 group :development do
   gem 'html2haml'

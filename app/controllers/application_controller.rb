@@ -6,5 +6,11 @@ class ApplicationController < ActionController::Base
   decent_configuration do
     strategy DecentExposure::StrongParametersStrategy
   end
+  
+  helper_method :page_title_prefix
+
+  def page_title_prefix
+    ""
+  end
 
 end
