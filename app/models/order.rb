@@ -12,13 +12,13 @@ class Order
 
   before_create :set_number
 
-  scope :pending, -> { Order.where(status: 'PENDING') }
-  scope :noncompleted , -> { where(:status.ne => 'COMPLETED') }
+  scope :pending, -> { where(status: 'PENDING') }
+  scope :noncompleted, -> { where(:status.ne => 'COMPLETED') }
+  scope :recent, -> { order_by(:created_at => :desc).limit(10) }
 
   def set_number
     self.number = new_order_number
   end
-
 
   private
 
@@ -27,7 +27,11 @@ class Order
   end
 
   def last_order_number
-    Order.first ? Order.first.number : 9
+    Order.count > 0 ? newest_order.number : 9
+  end
+
+  def newest_order
+    Order.recent.first
   end
 
 end
