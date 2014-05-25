@@ -4,6 +4,7 @@
       = fields_for 'order_items[]', order_item do |ff|
         %tr
           %td= ff.label :quantity, position.name
+          %td= ff.label :quantity, "#{position.price} zł"
           %td= ff.number_field :quantity, min: 0, value:0, :class => "form-control"
           = ff.hidden_field :id, :value => position.id, :class => "form-control"
   = f.submit 'Add Order', :class => "btn btn-primary"
