@@ -7,8 +7,12 @@ class Chef::OrdersController < Chef::BaseController
   end
 
   def update
-    order.update_attribute(:status, "READY")
-    render :index
+    if order.update_attribute(:status, "READY")
+      flash[:notice] = "Order number #{order.number} marked as ready"
+    else
+      flash[:alert] = "Unable to marked order number #{order.number} as ready"
+    end
+    redirect_to action: :index
   end
 
 end
