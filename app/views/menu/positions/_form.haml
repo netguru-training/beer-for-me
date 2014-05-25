@@ -1,0 +1,9 @@
+= form_for [:menu, position] do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :price
+    = f.text_field :price
+  .actions
+    = f.submit 'Save', :class => "btn btn-primary"

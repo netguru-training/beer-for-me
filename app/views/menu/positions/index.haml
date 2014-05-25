@@ -1,0 +1,19 @@
+%h1 Menu
+
+%table.table.table-striped
+  %tr
+    %th Name
+    %th Price
+    %th
+    %th
+    %th
+
+  - positions.each do |position|
+    %tr
+      %td= position.name
+      %td= position.price
+      %td= link_to 'Edit', edit_menu_position_path(position)
+      %td= link_to 'Destroy', menu_position_path(position), :method => :delete
+
+%br
+= link_to 'New Item', new_menu_position_path, :class => "btn btn-primary"
