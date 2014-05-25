@@ -1,3 +1,7 @@
 %h1 Dashboard
-%ol
-  = render 'orders/index', orders: orders
+#ready-orders
+  %h2 Ready Orders
+  = render 'orders/index', orders: ready_orders
+#pending-order
+  %h2 Pending Orders
+  = render 'orders/index', orders: pending_orders

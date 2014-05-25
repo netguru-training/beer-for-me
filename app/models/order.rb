@@ -15,6 +15,7 @@ class Order
   scope :pending, -> { where(status: 'PENDING') }
   scope :noncompleted, -> { where(:status.ne => 'COMPLETED') }
   scope :recent, -> { order_by(:created_at => :desc).limit(10) }
+  scope :ready, -> { where(status: 'READY')}
 
   def set_number
     self.number = new_order_number
