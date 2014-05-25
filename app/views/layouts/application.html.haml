@@ -8,7 +8,7 @@
         = javascript_include_tag "application"
         = csrf_meta_tags
         = yield(:head)
-  %body{:class => "#{controller_name} #{action_name}"}
+  %body{:class => "#{current_controller_name} #{action_name}"}
     .navbar.navbar-inverse.navbar-top
       %nav.navbar-inner
         .container
@@ -19,6 +19,6 @@
           .span12
             = render 'layouts/messages'
         .row
-          .span12.content-container
+          #js_content.span12.content-container
             = yield
           %footer

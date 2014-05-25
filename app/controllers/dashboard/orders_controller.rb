@@ -4,6 +4,7 @@ class Dashboard::OrdersController < Dashboard::BaseController
   expose_decorated(:order, decorator: Dashboard::OrderDecorator)
 
   def index
+     render(:layout => false) if request.xhr?
   end
 
   def update
