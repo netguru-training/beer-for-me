@@ -14,8 +14,8 @@
       %td= image_tag position.image, size: "100x100"
       %td= position.name
       %td= position.price
-      %td= link_to 'Edit', edit_menu_position_path(position)
-      %td= link_to 'Destroy', menu_position_path(position), :method => :delete
+      %td= link_to fa_icon("edit", text: "Edit"), edit_menu_position_path(position)
+      %td= link_to fa_icon("trash-o", text: "Delete"), menu_position_path(position), :method => :delete
 
 %br
 = link_to 'New Item', new_menu_position_path, :class => "btn btn-primary"
