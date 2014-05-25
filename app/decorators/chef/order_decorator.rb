@@ -8,5 +8,9 @@ class Chef::OrderDecorator < Draper::Decorator
   def hide_items?
     false
   end
+
+  def status_update_path
+    h.chef_order_path(object)
+  end
   
 end

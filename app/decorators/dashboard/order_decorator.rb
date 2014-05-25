@@ -9,4 +9,9 @@ class Dashboard::OrderDecorator < Draper::Decorator
     true
   end
 
+  def status_update_path
+    h.dashboard_order_path(object)
+  end
+  
+
 end
