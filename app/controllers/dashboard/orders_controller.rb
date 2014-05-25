@@ -7,9 +7,9 @@ class Dashboard::OrdersController < Dashboard::BaseController
 
   def update
     if order.update_attribute(:status, "COMPLETED")
-      flash[:notice] = "Order number #{order.number} marked as ready"
+      flash[:notice] = "Order number #{order.number} marked as completed"
     else
-      flash[:alert] = "Unable to marked order number #{order.number} as ready"
+      flash[:alert] = "Unable to marked order number #{order.number} as completed"
     end
     redirect_to action: :index
   end
