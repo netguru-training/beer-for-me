@@ -1,8 +1,0 @@
-%h1 Dashboard
-%ol
-  - orders.each do |order|
-    %p
-      = order.number.to_s + ' - ' + order.status
-      - if order.status == 'READY'
-        = link_to 'mark as completed', mark_order_as_completed_path(order.id), class: 'post__button--edit',
-        data: { confirm: 'Are you sure to mark selected order as completed?' }

@@ -6,4 +6,21 @@ class ApplicationController < ActionController::Base
   decent_configuration do
     strategy DecentExposure::StrongParametersStrategy
   end
+
+  helper_method :show_button_for?
+
+  def show_button_for?(order)
+    return case [order.status, controller]
+    when ['READY','dashboard'] then true
+    when ['PENDING', 'chef'] then true
+    else false
+    end
+  end
+
+  private
+
+  def controller
+    params[:controller].split('/').first
+  end
+
 end
