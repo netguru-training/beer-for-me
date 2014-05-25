@@ -1,10 +1,6 @@
 class Chef::BaseController < ApplicationController
 
-  helper_method :hide_order_items, :status_update_path
-
-  def hide_order_items
-    false
-  end
+  helper_method :status_update_path
 
   def status_update_path(order)
     chef_order_path(order)

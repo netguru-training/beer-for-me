@@ -1,7 +1,7 @@
 class Chef::OrdersController < Chef::BaseController
 
-  expose(:orders) { Order.pending }
-  expose(:order)
+  expose_decorated(:orders, decorator: Chef::OrderDecorator) { Order.pending }
+  expose_decorated(:order, decorator: Chef::OrderDecorator)
 
   def index
   end

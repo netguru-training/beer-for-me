@@ -1,6 +1,6 @@
 class Dashboard::OrdersController < Dashboard::BaseController
-  expose(:orders) { Order.noncompleted }
-  expose(:order)
+  expose_decorated(:orders, decorator: Dashboard::OrderDecorator) { Order.noncompleted }
+  expose_decorated(:order, decorator: Dashboard::OrderDecorator)
 
   def index
   end
