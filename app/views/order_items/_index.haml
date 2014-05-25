@@ -1,5 +1,6 @@
 %ol{ class: "order-item-list" }
   - order.order_items.each do |item|
     %li{ class: "order-item" }
+      = fa_icon "long-arrow-right"
       %span{ class: "order-item-quantity"}= "#{item.quantity}x"
       = item.position.name

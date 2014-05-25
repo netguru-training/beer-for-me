@@ -1,8 +1,10 @@
 %ul{ class: "order-list" }
   - orders.each do |order|
     %li{ class: "order" }
+      = fa_icon "arrow-right"
       %span{ class: "order-number" }= order.number
       - if order.show_status_change_button?
         = button_to "Mark as #{order.next_status}!", order.status_update_path, method: 'patch', class: "btn btn-primary"
       - unless order.hide_items?
         = render 'order_items/index', order: order
+      %hr
