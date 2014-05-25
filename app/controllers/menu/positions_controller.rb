@@ -37,7 +37,7 @@ module Menu
     private
 
     def position_params
-      params.require(:position).permit(:name, :price)
+      params.require(:position).permit(:name, :price, :image)
     end
 
   end

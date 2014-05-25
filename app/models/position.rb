@@ -4,6 +4,7 @@ class Position
 
   field :name, type: String
   field :price, type: Money
+  field :image, type: String
 
   validates_numericality_of :price, greater_than: 0
 

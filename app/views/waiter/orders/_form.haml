@@ -3,6 +3,7 @@
     - positions.each do |position|
       = fields_for 'order_items[]', order_item do |ff|
         %tr
+          %td= image_tag position.image, size: "100x100"
           %td= ff.label :quantity, position.name
           %td= ff.label :quantity, "#{position.price} zł"
           %td= ff.number_field :quantity, min: 0, value:0, :class => "form-control"
