@@ -20,6 +20,13 @@ class Order
     self.number = new_order_number
   end
 
+  def next_status
+    case self.status
+    when 'PENDING' then 'READY'
+    when 'READY' then 'COMPLETED'
+    end
+  end
+
   private
 
   def new_order_number
