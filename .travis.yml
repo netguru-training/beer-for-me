@@ -6,4 +6,5 @@ notifications:
       secure: uz1MFTxcZrs0eDiMhPhCbERK9nmmVCoEtuxiAM3E2gPWxPmDBNgSd7yE8KGYfPhHmKq+wan3ygwu+1GsY0+rrn/I5Ubpwhn14U5XkU+tWb2PUrdiCICRRfrmw3D0SCPKJSKWHmKHpKIodyUKm/C1rYK6UrDT5RUBAr6yDaUAql4=
 deploy:
   provider: heroku
-  api_key: ab638a27-2b7c-4c2d-9915-7903c0743975
+  api_key: EkpACjBuKL4UHebynD0gJ/pDgYmNyB6d7AKiwGCtoDSCdMohFtJIQKZiqUbgZkl3v9Qutbn8wAXzmoni5hYjXQS6goyBfHEU8jQg9c6onFayj/YU3Gpj3si7WDcDggHAv2KIBnOgdWtv/iuUklq/IMl5ba3BHRkPhveNvI05ROE=
+  app: beer4me
