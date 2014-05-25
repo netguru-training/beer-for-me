@@ -9,9 +9,9 @@ class DashboardController < ApplicationController
     @order.status = 'COMPLETED'
 
     if @order.save
-      flash[:notice] = '#{@order.number} marked as completed'
+      flash[:notice] = 'Order number ' + @order.number.to_s + ' marked as completed'
     else
-      flash[:alert] = 'Unable to marked order #{@order.number} as completed'
+      flash[:alert] = 'Unable to marked order number ' + @order.number + ' as completed'
     end
 
     redirect_to dashboard_path
