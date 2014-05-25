@@ -1,10 +1,19 @@
 = form_for [:waiter, waiter_orders] do |f|
-  %table.table.table-striped
+  %table.table.table-striped#positions-table
+    %thead
+      %tr
+        %th Position name
+        %th Price
+        %th Quantity
+        %th Controls
     - positions.each do |position|
       = fields_for 'order_items[]', order_item do |ff|
         %tr
-          %td= ff.label :quantity, position.name
-          %td= ff.label :quantity, "#{position.price} zł"
-          %td= ff.number_field :quantity, min: 0, value:0, :class => "form-control"
+          %td.name= ff.label :quantity, position.name
+          %td.price= ff.label :quantity, "#{position.price} zł"
+          %td.quantity= ff.number_field :quantity, min: 0, value:0, :class => "form-control"
+          %td.controls
+            = fa_icon "plus"
+            = fa_icon "minus"
           = ff.hidden_field :id, :value => position.id, :class => "form-control"
   = f.submit 'Add Order', :class => "btn btn-primary"
